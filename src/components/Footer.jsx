@@ -12,7 +12,6 @@ export const Footer = () => {
         <Rise text={site.footer.title} className="font-serif text-5xl sm:text-7xl" />
         <p className="mt-4 max-w-md text-base text-coffee-950/80">{site.footer.paragraph}</p>
         
-        {/* BOTÓN WHATSAPP DESTACADO */}
         <a
           href={whatsappUrl}
           target="_blank"

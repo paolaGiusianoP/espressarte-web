@@ -42,9 +42,7 @@ export const Testimonials = () => {
           )}
         </div>
 
-        {/* Cita grande */}
         <div className="relative min-h-[14rem] pt-8">
-        {/* Comilla decorativa */}
         <span
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/3 font-serif text-[10rem] italic leading-none text-coffee-700/[0.08] select-none"
@@ -64,7 +62,6 @@ export const Testimonials = () => {
               {current.role && (
                 <p className="text-xs text-coffee-700/80">{current.role}</p>
               )}
-              {/* Estrellas */}
               <div className="mt-3 flex gap-1" role="img" aria-label={`${current.stars || 5} de 5 estrellas`}>
                 {Array.from({ length: current.stars || 5 }).map((_, i) => (
                   <span key={i} className="text-sm text-coffee-500">★</span>
@@ -74,7 +71,6 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        {/* Dots */}
         {testimonials.length > 1 && (
           <div className="flex justify-center gap-2">
             {testimonials.map((t, i) => (

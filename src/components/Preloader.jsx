@@ -52,10 +52,8 @@ export const Preloader = ({ onDone, onLift }) => {
         ${phase === 'lift' ? '-translate-y-full' : 'translate-y-0'}
       `}
     >
-      {/* Grain */}
       <div className="pointer-events-none absolute inset-0 bg-grain opacity-40" />
 
-      {/* Halo cálido — más sutil y sin blur excesivo */}
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full"
         style={{
@@ -70,10 +68,8 @@ export const Preloader = ({ onDone, onLift }) => {
         {/* CENTRO */}
         <div className="my-auto flex flex-col items-center">
 
-          {/* Escena: portafiltro → chorro → taza */}
           <div className="relative flex flex-col items-center">
 
-            {/* PORTAFILTRO — más grande, con más detalle */}
             <div className="relative z-20">
               <svg
                 viewBox="0 0 60 32"
@@ -84,18 +80,13 @@ export const Preloader = ({ onDone, onLift }) => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                {/* Mango del portafiltro */}
                 <path d="M30 2 L30 7" />
-                {/* Cuerpo */}
                 <path d="M12 7 H48 V13 A18 8 0 0 1 12 13 Z" fill="currentColor" fillOpacity="0.12" />
-                {/* Filtro interno (líneas) */}
                 <path d="M16 10 H44" strokeOpacity="0.5" />
-                {/* Salida */}
                 <path d="M28 15 V19 M32 15 V19" />
               </svg>
             </div>
 
-            {/* CHORRO — nace del portafiltro, conecta con la taza */}
             <div className="relative z-10 -mt-1 h-14 w-[3px] overflow-hidden">
               <div
                 className="absolute inset-x-0 top-0 origin-top rounded-full bg-gradient-to-b from-[#d4a373] via-[#8c5a3c] to-[#3d2118] transition-transform duration-200 ease-out"
@@ -110,7 +101,6 @@ export const Preloader = ({ onDone, onLift }) => {
 
             {/* TAZA */}
             <div className="relative mt-0 h-[86px] w-[150px]">
-              {/* Plato (detrás de la taza) */}
               <div
                 className="absolute bottom-0 left-1/2 h-[12px] w-[168px] -translate-x-1/2 rounded-[50%]"
                 style={{
@@ -119,7 +109,6 @@ export const Preloader = ({ onDone, onLift }) => {
                 }}
               />
 
-              {/* Asa (detrás del cuerpo, conectada visualmente) */}
               <div
                 className="absolute right-[6px] top-[18px] h-[38px] w-[26px] rounded-r-full border-[6px] border-[#d4a373]/55"
                 style={{
@@ -129,7 +118,6 @@ export const Preloader = ({ onDone, onLift }) => {
                 }}
               />
 
-              {/* Cuerpo de la taza — forma más realista */}
               <svg
                 viewBox="0 0 150 86"
                 className="absolute inset-0 h-full w-full"
@@ -146,7 +134,6 @@ export const Preloader = ({ onDone, onLift }) => {
                     <stop offset="100%" stopColor="#3d2118" />
                   </linearGradient>
                 </defs>
-                {/* Cuerpo (trapecio con curva inferior) */}
                 <path
                   d="M18 12
                      Q18 8 24 8
@@ -161,7 +148,6 @@ export const Preloader = ({ onDone, onLift }) => {
                   stroke="rgba(212,163,115,0.45)"
                   strokeWidth="1"
                 />
-                {/* Interior / abertura superior */}
                 <ellipse cx="75" cy="12" rx="56" ry="7" fill="#efe7dd" />
                 <ellipse
                   cx="75"
@@ -175,7 +161,6 @@ export const Preloader = ({ onDone, onLift }) => {
                     transition: 'transform 0.4s ease-out',
                   }}
                 />
-                {/* Crema (aparece al 55%) */}
                 <ellipse
                   cx="75"
                   cy="12"
@@ -191,7 +176,6 @@ export const Preloader = ({ onDone, onLift }) => {
                 />
               </svg>
 
-              {/* Vapor (aparece al 65%) */}
               <div
                 className={`pointer-events-none absolute -top-2 left-1/2 h-12 w-24 -translate-x-1/2 transition-opacity duration-700 ${
                   pct > 65 ? 'opacity-100' : 'opacity-0'
@@ -204,9 +188,7 @@ export const Preloader = ({ onDone, onLift }) => {
             </div>
           </div>
 
-          {/* WORDMARK con fill líquido */}
           <div className="relative mt-10 select-none">
-            {/* Texto "fantasma" — ahora visible pero apagado */}
             <h1
               className="font-serif italic leading-none tracking-[-0.03em] text-[#4a3529]"
               style={{ fontSize: 'clamp(3rem, 9vw, 6.5rem)' }}
@@ -214,7 +196,6 @@ export const Preloader = ({ onDone, onLift }) => {
               Espressarte
             </h1>
 
-            {/* Texto que se llena — con transición más suave */}
             <h1
               aria-hidden="true"
               className="absolute inset-0 bg-gradient-to-b from-[#f7f3ed] via-[#d4a373] to-[#8c5a3c] bg-clip-text font-serif italic leading-none tracking-[-0.03em] text-transparent"
@@ -234,7 +215,6 @@ export const Preloader = ({ onDone, onLift }) => {
           </p>
         </div>
 
-        {/* BOTTOM: barra de progreso */}
         <div className="w-full max-w-xs pb-2">
           <div className="mb-2.5 flex items-center justify-between">
             <span className="font-mono text-[9px] tracking-[0.3em] text-[#8f7769]">

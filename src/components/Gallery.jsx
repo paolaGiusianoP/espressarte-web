@@ -51,7 +51,6 @@ export const Gallery = () => {
           )}
         </div>
 
-        {/* Grid masonry-like */}
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {images.map((img, i) => (
             <button
@@ -71,9 +70,7 @@ export const Gallery = () => {
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 motion-reduce:transition-none"
               />
-              {/* Overlay que aparece en hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-coffee-950/80 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              {/* Caption */}
               {img.caption && (
                 <span className="absolute bottom-3 left-3 translate-y-2 font-serif text-sm italic text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                   {img.caption}
@@ -84,7 +81,6 @@ export const Gallery = () => {
         </div>
       </div>
 
-      {/* Lightbox */}
       {current && createPortal(
         <div
           className="fixed inset-0 z-[120] flex items-center justify-center bg-coffee-950/95 p-6 backdrop-blur-md"

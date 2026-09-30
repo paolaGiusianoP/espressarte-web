@@ -167,7 +167,6 @@ export const Hero = ({ ready = true }) => {
         ref={innerRef}
         className="sticky top-0 flex h-screen origin-top flex-col overflow-hidden bg-[#170d09] bg-grain will-change-transform motion-reduce:static motion-reduce:h-auto motion-reduce:min-h-screen"
       >
-        {/* Viñeta radial */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-0 opacity-50"
@@ -177,7 +176,6 @@ export const Hero = ({ ready = true }) => {
           }}
         />
 
-        {/* Espaciador para el Navbar fixed */}
         <div className="h-20 shrink-0 lg:h-24" />
 
         {/* ESCENARIO */}
@@ -203,7 +201,6 @@ export const Hero = ({ ready = true }) => {
             </div>
           </div>
 
-          {/* Oscurecido suave hacia los bordes: el centro queda limpio para que se vea el vaso */}
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 z-[15]"
@@ -215,7 +212,6 @@ export const Hero = ({ ready = true }) => {
             }}
           />
 
-          {/* TEXTO: abajo, para no tapar el vaso */}
           <div
             className={`pointer-events-none relative z-20 flex h-full flex-col items-center px-8 text-center ${IS_SHOWCASE ? 'justify-end pb-[4vh]' : 'justify-center'}`}
             style={{
@@ -243,7 +239,6 @@ export const Hero = ({ ready = true }) => {
             </h1>
           </div>
 
-          {/* A los lados del vaso: llenan el espacio vacío y sacan el tagline de la leche */}
           {IS_SHOWCASE && tagParts[0] && (
             <div className="pointer-events-none absolute left-8 top-1/2 z-20 hidden -translate-y-1/2 md:block lg:left-14">
               <div className={enter} style={{ animationDelay: '.9s' }}>

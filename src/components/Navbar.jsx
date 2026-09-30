@@ -42,7 +42,6 @@ export const Navbar = () => {
             {site.brand.name}
           </a>
 
-          {/* Links desktop */}
           <nav
             aria-label="Navegación principal"
             className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 font-mono text-[10px] uppercase tracking-[0.3em] text-[#c2b2a3] md:flex"
@@ -60,7 +59,6 @@ export const Navbar = () => {
             ))}
           </nav>
 
-          {/* CTA desktop + hamburguesa mobile */}
           <div className="flex items-center gap-3">
             <a
               href={WHATSAPP_URL}
@@ -101,7 +99,6 @@ export const Navbar = () => {
         </div>
       </header>
 
-      {/* Overlay mobile */}
       <div
         aria-hidden={!open}
         className={`
